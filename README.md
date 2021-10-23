@@ -20,7 +20,7 @@ structure and code separation.
 1. Download this project to your computer using cmd command
 ```sh
 git clone https://github.com/orti10/Ortal-Hanoch-20-10-2021.git
-cd football-game-service-master
+cd Ortal-Hanoch-20-10-2021
 npm init
 ```
 
