@@ -1,0 +1,37 @@
+@media only screen and (max-width: 1200px) {
+    .main-app {
+        width: 80%; 
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .main-app.ui.container{
+        width: 100%;
+        margin-right: 0 !important;
+        margin-left: 0 !important;
+        overflow-x: hidden;
+    }
+    .App.ui.app-main .container {
+        display: block;
+    }
+    .app-main .container div {
+        margin: 10% 0 !important;
+    }
+    .ui.grid {
+        width: 100%;
+        margin: 1% auto;
+    }
+    .ui.grid .card {
+        margin: 0.5rem;
+    }
+    .search-result {
+        margin: 5px !important;
+    }
+    .search-result .description{
+        margin: 5px !important;
+    }
+    .menu button.labeled{
+        width: unset !important;
+        font-size: 12px;
+    }
+}

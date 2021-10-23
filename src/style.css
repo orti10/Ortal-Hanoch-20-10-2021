@@ -1,0 +1,106 @@
+html{
+    height: 100%;
+}
+body {
+    margin: 0;
+    height: 100vh;
+    width: 100%;
+}
+#root { 
+    height: 100vh;
+    width: 100%;
+    z-index: -1;
+}
+.background-day{
+    background: url(/src/backgrounds/day.png);
+    background-size: 100% 100%;
+    transition: background .10s ;
+
+}
+.background-night{
+    background: url(/src/backgrounds/night.png);
+    background-size: 100% 100%;
+    transition: background .10s ;
+}
+.night, .night div, .night .menu, .night .item{
+    color: #686b7c !important;
+    background-color: #151515 !important;
+}
+.night.menu,
+.night.menu .item
+{
+    color: #686b7c !important;
+    background-color: #161516 !important;
+}
+.main-app {
+    background-color: white;
+    width: 50%;
+    margin: auto;
+    height: 150vh;
+}
+.App.ui.app-main .container {
+    display: flex;
+    justify-content: space-around;
+}
+.pointing.menu {
+    width: 100%;
+}
+.menu .labeled{
+    width: 11rem !important;
+}
+.options-list {
+    width: 20rem !important;
+    margin: 0 !important;
+    display: block !important;
+    transition: all 0.2s ease-in-out;
+    transform-origin: left top;
+}
+.weather-extra-content,
+.card.weather-item{
+    transition: all 0.2s ease-in-out;
+    transform-origin: left top;
+}
+.ui.container input {
+    width: 20rem;
+    height: 3rem;
+    border: 2px solid lightgray;
+    border-radius: 5px;
+}
+.ui.grid {
+    width: 75%;
+    margin: 2%;
+}
+.ui.grid .card {
+    margin: 5px;
+}
+.ui.list .item .description,
+.ui.grid .card .description,
+.ui.grid .card .header {
+    cursor: pointer;
+}
+.favorites-page {
+    text-align: center;
+}
+.favorites-page .favorites-empty-msg {
+    display: block;
+}
+
+input.night{
+    background-color: #2e2d2d;
+}
+.night .header,
+.night .description{
+    color: whitesmoke !important;
+}
+.content .description.night{
+    color: #686b7c !important;
+}
+.content a{
+    color: #909197 !important;
+}
+.search-result p {
+    cursor: pointer;
+
+}
+.search-result p:hover {
+text-decoration: underline;}
