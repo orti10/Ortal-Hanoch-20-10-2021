@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Current Weather API
 
 ## API
 The API that you’ll use for this app is [AccuWeather API](https://developer.accuweather.com/).
