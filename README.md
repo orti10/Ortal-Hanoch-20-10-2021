@@ -1,5 +1,9 @@
 # Current Weather API
 
+## [I deployed my project on a Heroku server - Click Here](https://ortal-weather-api.herokuapp.com/#/)
+
+Read more about [Heroku](https://www.heroku.com/)
+
 ## API
 The API that you’ll use for this app is [AccuWeather API](https://developer.accuweather.com/).
 Please signup and create a new app in order to get an API key.
@@ -34,7 +38,9 @@ npm install
 npm start
 ```
 ## Video
-https://user-images.githubusercontent.com/44768171/138568785-96ee4f99-769b-445a-8921-3caf9c1fb1fc.mp4
+https://user-images.githubusercontent.com/44768171/138589861-d56f4962-04f5-4f35-b850-36c7090e5329.mp4
+
+
 
 
 
