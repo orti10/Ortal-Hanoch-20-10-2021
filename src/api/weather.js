@@ -11,26 +11,26 @@ export const weatherAPI = {
     getWeatherFromKey
 }
 
-async function query(term) {
+async function query(term){
     return axios.get(SEARCH_URL + KEY + '&q=' + term + '&language=en-us').then(res=>{
         return res.data
     })
 }
 
-async function getWeather(city) {
-    return axios.get(WEATHER_URL + city.Key + KEY + '&language=en-us&details=true&metric=true').then(res=>  {
+async function getWeather(city){
+    return axios.get(WEATHER_URL + city.Key + KEY + '&language=en-us&details=true&metric=true').then(res=>{
         return res.data
     })
 }
 
-async function getWeatherFromKey(key) {
-    return axios.get(WEATHER_URL + key + KEY + '&language=en-us&details=true&metric=true').then(res=>  {
+async function getWeatherFromKey(key){
+    return axios.get(WEATHER_URL + key + KEY + '&language=en-us&details=true&metric=true').then(res=>{
         return res.data
     })
 }
 
 async function getCityFromGeolocation(lat,lng){
-    return axios.get(GEOLOCATION_URL+  KEY + '&q='+lat+','+lng).then(res=>  {
+    return axios.get(GEOLOCATION_URL+  KEY + '&q='+lat+','+lng).then(res=>{
         return res.data
     })
 }

@@ -17,14 +17,12 @@ const SearchBar = () => {
         // setCity(currCity)
         return () => document.removeEventListener("mousedown", handleOutsideClick)
     }, [currCity])
-    
-
-    const handleOutsideClick = (ev) => {
+        
+        const handleOutsideClick = (ev) =>{
         const { current: wrap } = wrapperRef
         if (wrap && !wrap.contains(ev.target)) setDisplay(false)
     }
-
-    const onSearchType = async (ev) => {
+    const onSearchType = async (ev) =>{
         ev.preventDefault()
         const letter = ev.nativeEvent.data
         if (letter) {
@@ -35,7 +33,6 @@ const SearchBar = () => {
         if (!ev.target.value) return
         const debouncedDispatch = db(() => dispatch(searchCity(city)), 850)
         debouncedDispatch()
-
     }
     const onSelect = (city) => {
         setCity(city.LocalizedName)
@@ -48,13 +45,14 @@ const SearchBar = () => {
             ref={wrapperRef}>
             <GetUserLocation/>
             <h3> Search a City...</h3>
-            <input type="text" 
+
+            <input type="text"
                 placeholder="Type to Search..."
                 onChange={onSearchType}
                 value={city}
                 onClick={() => setDisplay(!display)}
-                className={dayMode ? null : 'night'}>
-            </input>
+                className={dayMode ? null : 'night'}
+            />
             <div
                 className="options-list"
                 style={display ? { transform: 'scaleY(1)' } : { transform: 'scaleY(0)' }}>
@@ -64,4 +62,5 @@ const SearchBar = () => {
         </>
     )
 }
+
 export default SearchBar

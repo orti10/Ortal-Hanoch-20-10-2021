@@ -1,4 +1,3 @@
-
 import { React, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { searchCityFromLocation } from '../store/actions/index'
@@ -6,7 +5,7 @@ import { searchCityFromLocation } from '../store/actions/index'
 
 const GetUserLocation = () => {
     const dayMode = useSelector((state) => state.dayMode)
-    const [msg, setMsg] = useState('Click to check the weather in your location')
+    const [msg, setMsg] = useState('Click HERE to check the forecast for your location!')
     const dispatch = useDispatch()
     const success = position => { 
         dispatch(searchCityFromLocation(position.coords.latitude, position.coords.longitude)) }
@@ -30,4 +29,5 @@ const GetUserLocation = () => {
         </div>
     )
 }
+
 export default GetUserLocation

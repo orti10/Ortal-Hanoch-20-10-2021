@@ -8,6 +8,7 @@ import ListItem from './ListItem'
 
 const List = props => {
     const history = useHistory()
+
     const dispatch = useDispatch()
     const cityList = useSelector((state) => state.cityList)
     const [favoritesToDisplay, setFavoritesToDisplay] = useState([])
@@ -17,7 +18,7 @@ const List = props => {
         dispatch(getFavorites()).then(res=>{
             setFavoritesToDisplay(res.payload)
         })
-    })
+    }, [])
 
     const toggleFavoriteCity = async (city) => {
         await dispatch(toggleFavorite(city))

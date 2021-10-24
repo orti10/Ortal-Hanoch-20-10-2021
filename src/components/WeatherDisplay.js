@@ -1,5 +1,5 @@
-import { React, useEffect, useState } from 'react'
 
+import { React, useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { getWeather } from '../store/actions/index'
 
@@ -11,7 +11,6 @@ const WeatherDisplay = () => {
     const weather = useSelector((state) => state.weather);
     const [msg, setMsg] = useState('Loading...')
     const [msgHeader, setMsgHeader] = useState('Loading')
-
     let icon;
 
     useEffect(() => {
@@ -25,7 +24,6 @@ const WeatherDisplay = () => {
             setMsgHeader('Error')
         }, 2000);
     })()
-
     const renderImg = () => {
         if (!icon) return
         else if (icon < 10) return <img src={`https://developer.accuweather.com/sites/default/files/0${icon}-s.png`} alt="weather icon" />
@@ -36,7 +34,6 @@ const WeatherDisplay = () => {
         const degrees = dayMode ? weather.DailyForecasts[dayNum].Temperature.Maximum.Value : weather.DailyForecasts[dayNum].Temperature.Minimum.Value
         return unit ? Math.floor(degrees) : Math.floor(degrees * 9 / 5 + 32)
     }
-
     const renderFiveDays = () => {
         if (!icon) return
         return weather.DailyForecasts.map((day, idx) => {
@@ -76,4 +73,5 @@ const WeatherDisplay = () => {
 
     </>)
 }
+
 export default WeatherDisplay
